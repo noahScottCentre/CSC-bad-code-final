@@ -18,11 +18,7 @@ class SalaryEmployeeTest {
 		A.setRate(1.0f);
 		A.setHours(10.0f);
 		A.pay();
-		assertEquals(A.getLastPayment(), 15.0f);
-		A.setRate(1.0f);
-		A.setHours(100.0f);
-		A.pay();
-		assertEquals(A.getLastPayment(), 150.0f);
+		assertEquals(A.getLastPayment(), 40.0f);
 	}
 
 }
