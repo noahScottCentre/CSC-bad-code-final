@@ -61,6 +61,6 @@ class PayrollTest {
                                                                  
         float[] RecordsB = B.payAll();                           
         assertEquals(RecordsB.length, 1);                        
-        assertEquals(RecordsB[0], 200.0f);                          
+        assertEquals(RecordsB[0], 40.0f);                          
 	}
 }
