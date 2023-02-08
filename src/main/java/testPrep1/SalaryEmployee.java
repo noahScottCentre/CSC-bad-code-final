@@ -7,7 +7,7 @@ public class SalaryEmployee extends Employee {
 	}
 	
 	public float pay(){            
-		super.setLastPayment(super.getRate() * super.getHours() * 1.5f);
+		super.setLastPayment(super.getRate() * 40.0f);
 		return super.getLastPayment();        
 	}
 
