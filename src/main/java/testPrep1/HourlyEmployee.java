@@ -7,9 +7,9 @@ public class HourlyEmployee extends Employee {
 	}
 	
 	public float pay(){
-		float preFortyHours = super.getHours() > 40 ? 40 : super.getHours();
-		float postFortyHours = super.getHours() - preFortyHours;
-		super.setLastPayment(preFortyHours * super.getRate() + postFortyHours * 1.5f * super.getRate());
+		float method1 = super.getHours() > 40 ? 40 : super.getHours();
+		float method2 = super.getHours() - preFortyHours;
+		super.setLastPayment(method1 * super.getRate() + method2 * 1.5f * super.getRate());
 		return super.getLastPayment();        
 	}                              
 
