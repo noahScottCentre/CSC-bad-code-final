@@ -2,8 +2,8 @@ package testPrep1;
 
 public class HourlyEmployee extends Employee {
 
-	public HourlyEmployee(String firstName, String lastName, float rate) {
-		super(firstName, lastName, rate, "Hourly Employee");
+	public HourlyEmployee(String name, String Lastname, float r) {
+		super(name, Lastname, r, "Hourly Employee");
 	}
 	
 	public float pay(){
