@@ -1,37 +1,37 @@
 package testPrep1;
 
 public class Employee {
-	private String firstName,  lastName, title;
-	private float rate, hours, lastPayment;
+	public String f,  l, t;
+	public float r, h, p;
 	
-	public Employee(String firstName, String lastName, float rate, String title) {
-		this.firstName	= firstName;
-		this.lastName	= lastName;
-		this.rate		= rate;
-		this.hours = 0.0f;
-		this.title = title;
+	public Employee(String f, String l, float r, String t) {
+		this.f	= f;
+		this.l	= l;
+		this.r	= r;
+		this.h = 0.0f;
+		this.t = t;
 	}
 
-	public void setFirstName(String firstName)   { this.firstName = firstName;} 
-	public void setLastName(String lastName)     { this.lastName = lastName;} 
-	public void setRate(float rate)			     { this.rate = rate;} 
-	public void setHours(float hours)		     { this.hours = hours;}
-	public void setLastPayment(float lastPayment){ this.lastPayment = lastPayment;}
+	public void setFirstName(String f) { this.f = f;} 
+	public void setLastName(String l) { this.l = l;} 
+	public void setRate(float r)	{ this.r = r;} 
+	public void setHours(float h) { this.h = h;}
+	public void setLastPayment(float p){ this.p = p;}
 	
-	public String getFirstName() { return firstName;}
-	public String getLastName () { return lastName;}    
-	public float getRate()		 { return rate;}                     
-	public float getHours()		 { return hours;}
-	public float getLastPayment(){ return lastPayment;}
+	public String getFirstName() { return f;}
+	public String getLastName () { return l;}    
+	public float getRate()       { return r;}           
+	public float getHours()	     { return h;}
+	public float getLastPayment(){ return p;}
 	
 	public float pay(){
-		lastPayment = rate * hours;
-		return lastPayment;
+		p = r * h;
+		return p;
 	}
 	
 	public String toString() {
-		return this.title + ": " + this.firstName + " " + this.lastName
-				+ " Last Payment: " + lastPayment;
+		return this.t + ": " + this.f + " " + this.l
+				+ " Last Payment: " + this.p;
 	}
 	
 }
