@@ -16,14 +16,11 @@ class ContractorsTest {
 
 	@Test
 	void testPay() {
-		A.setRate(1.0f);
-		A.setHours(20.0f);
-		A.pay();
-		assertEquals(A.getLastPayment(), 20.0f);
-		A.setRate(1.0f);
-		A.setHours(100.0f);
-		A.pay();
-		assertEquals(A.getLastPayment(), 100.0f);
-	}
-
-}
+					 A.setRate(1.0f);
+	               A.setHours(20.0f);
+				         A.pay();
+ assertEquals(A.getLastPayment(), 20.0f);
+			                 A.setRate(1.0f);
+		      A.setHours(100.0f);
+					 A.pay();
+assertEquals(A.getLastPayment(), 100.0f);}}
