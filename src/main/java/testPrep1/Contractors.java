@@ -1,7 +1,7 @@
 package testPrep1;
 
 public class Contractors extends Employee {
-	public Contractors(String firstName, String lastName, float rate) {
-		super(firstName, lastName, rate, "Contractor");
+	public Contractors(String FN, String LN, float R) {
+		super(FN, LN, R, "Contractor");
 	}
 }
