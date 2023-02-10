@@ -3,4 +3,4 @@ List of bad code practices:
 
 0. Inconsistent style and Bad variable names.
 -> Made every variable one letter in Employee, contrators has capital unrelated things, ect.
-1. 
+1. Functions are in funny, fun shapes :) ♑︎♏︎♐︎
