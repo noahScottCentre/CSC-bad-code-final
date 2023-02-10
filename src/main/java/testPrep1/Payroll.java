@@ -1,57 +1,21 @@
-package testPrep1;
-
-public class Payroll {
-	private int listingSize = 0;
-	private Employee[] employeeListing = null;
-	
-	public Payroll() {
-		employeeListing = new Employee[0];
-	}
-	
-	public void registerEmployee(String title, String firstName, String lastName, float rate) {
-		Employee[] temp = new Employee[listingSize + 1];
-		for(int i = 0; i < listingSize; i++) {
-			temp[i] = employeeListing[i];
-		}
-		if(title.equals("Contractor"))
-			temp[listingSize] = new Contractors(firstName, lastName, rate);
-		else if (title.equals("Hourly"))
-			temp[listingSize] = new HourlyEmployee(firstName, lastName, rate);
-		else if (title.equals("Salary"))
-			temp[listingSize] = new SalaryEmployee(firstName, lastName, rate);
-		else {
-			System.out.println("bad employee title, fallback to generic");
-			temp[listingSize] = new Employee(firstName, lastName, rate, "Employee");
-		}
-		listingSize += 1;
-		employeeListing = temp;
-	}
-	
-	public int setHoursWorked(String firstName, String lastName, float hours) {
-		for(int i = 0; i < listingSize; i++) {
-			if( (employeeListing[i].getFirstName().equals(firstName)) && 
-				(employeeListing[i].getLastName().equals(lastName)  ) ){	
-				
-				employeeListing[i].setHours(hours);
-				return 0;
-			}
-		}
-		return 1;
-	}
-	
-	public float[] payAll() {
-		float[] record = new float[listingSize];
-		for(int i = 0; i < listingSize; i++) {
-			employeeListing[i].pay();
-			record[i] = employeeListing[i].getLastPayment();
-		}
-		return record;
-	}
-	
-}
-
-
-
-
-
-
+                                   package 
+                                  testPrep1;
+                                 public class 
+                                Payroll{private 
+                                int ls; private 
+  Employee[] el = null;  public Payroll(  ) {el = new Employee[ 0 ];}public void 
+     registerEmployee(  String t, String f, String l, float r) { Employee[] 
+	   temp=new Employee[ls+1];for(int i; i < ls; i++){temp[i] =    
+	       	 el[i];}if(t.equals("Contractor"))temp[ls]=new
+                   Contractors(f, l, r); else if (t.equals(
+                "Hourly"))temp[ls]=new HourlyEmployee(f, l, r); 
+               else if (   t.equals( "Salary"  ) ) temp[ ls ]=new 
+             SalaryEmployee(f, l, r);      else { System.out.println( 
+	  "bad employee title, fall"         +"back to generic");temp[ls]
+         =new Employee(f, l, r,                  "Employee");}ls += 1;el =
+			  
+temp;} public int setHoursWorked(String firstName, String lastName, float hours)
+{for(int i; i < ls; i++) {if( (el[i].getFirstName().equals( firstName)) && (el[i
+].getLastName().equals(lastName))){el[i].setHours(hours);return 0; } } return 1;
+} public float[] payAll( ) {float[] record = new float[ls]; for(int i ; i < ls ;
+i++ ) {el[ i ].pay(); record[ i ] = el[ i ].getLastPayment( ); }return record;}}
